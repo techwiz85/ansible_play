@@ -1,0 +1,16 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+    # use the domain controller for dns server; not normally needed
+    - win_owner:
+        path: C:\Program Files\SomeApp
+        user: Administrator
+        recurse: true
+
+    - win_acl:
+        path: C:\Temp
+        user: Users
+        rights: ReadAndExecute,Write,Delete
+        inherit: ContainerInherit,ObjectInherit
+
+

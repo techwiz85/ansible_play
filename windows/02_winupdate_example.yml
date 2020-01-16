@@ -1,0 +1,7 @@
+- hosts: win
+  tasks:
+  - win_updates:
+      category_names: CriticalUpdates
+      reboot: yes # new in 2.5!
+#   blacklist: # new in 2.5!
+#   - KB4056892

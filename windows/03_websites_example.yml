@@ -1,0 +1,10 @@
+- hosts: win
+  tasks:
+  - win_iis_website:
+      name: Default Web Site
+      physical_path: C:\Inetpub\WWWRoot
+ 
+  - win_iis_webapp:
+      name: OrchardCMS
+      site: Default Web Site
+      physical_path: C:\Inetpub\WWWRoot\Orchard

@@ -1,6 +1,7 @@
 # Installing Ansible for Windows References
 
 1.  [Manage Windows like Linux with Ansible Video](https://www.youtube.com/watch?v=FEdXUv02Dbg)
+2.  [Ansible for the Windows Admin Video (Powershell + DevOps 2019)](https://www.youtube.com/watch?v=ZI20Y10OKd0)
 2.  [AnsibleDocs-Windows Guides](https://docs.ansible.com/ansible/latest/user_guide/windows.html)
 3.  [AnsibleDocs-FAQ](https://docs.ansible.com/ansible/latest/reference_appendices/faq.html)
 4.  [AnsibleDocs-Windows Modules](https://docs.ansible.com/ansible/latest/modules/list_of_windows_modules.html)
@@ -12,3 +13,5 @@
 # Example Ansible commands, using Ubuntu on WSL:
 1.  ansible-playbook Playbook1.yml -i inventory.txt --connection=local
 2.  ansible-playbook test.yml -i inventory.txt --connection=local
+3.  ansible win -i hosts -m win_ping
+4.  ansible-playbook -i hosts 01_chocolatey_example.yml

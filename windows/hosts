@@ -1,0 +1,8 @@
+[win]
+localhost
+
+[win:vars]
+ansible_user=user1
+ansible_password=user1
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
