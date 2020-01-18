@@ -1,0 +1,21 @@
+# File: winrm_test_pb.yml
+#
+# Simple ansible playbook that runs a test against a MS Windows host
+#
+# cmdLine:
+#   ansible-playbook -i winrm_test_hosts.ini -e "@winrm_test_vars.yml" winrm_test_pb.yml
+-
+  name: Play 1
+  hosts: "{{ win_host1 }}"
+  tasks:
+  - debug: var=win_host1
+
+  - name: Use the win_chocolatey module to install process explorer
+    win_chocolatey:
+      name: procexp
+      state: present
+
+  - name: Use the win_updates module to install the latest patches
+    win_updates:
+      category_names: CriticalUpdates
+      reboot: yes
