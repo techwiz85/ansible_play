@@ -1,0 +1,22 @@
+# File: variable_test_pb.yml
+#
+# This playbook contains a single play to display the contents on ansible
+# variables.
+#
+# ansible-playbook command line examples
+#
+# ansible-playbook -i variable_test_hosts.ini -e "host1=127.0.0.1" \
+#  -e "user1_username=testuser" -e "user1_password=Password123" \
+#  variable_test_pb.yml
+#
+# ansible-playbook -i variable_test_hosts.ini -e "@variable_test_vars.yml" variable_test_pb.yml
+-
+  name: Play 1
+  hosts: "{{ host1 }}"
+  tasks:
+  - debug:
+      msg:
+      - "host1={{ host1 }}"
+      - "user1_username={{ user1_username }}"
+      - "user1_password={{ user1_password }}"
+      - "ansible_connection={{ ansible_connection }}"

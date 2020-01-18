@@ -1,0 +1,8 @@
+# File: variable_test_vars.yml
+#
+# This is an example of an ansible variables file that can be referenced
+# from the ansible-playbook command line as -e "@variable_test_vars.yml"
+#
+host1: "127.0.0.1"
+user1_username: testuser
+user1_password: 'Password123'
