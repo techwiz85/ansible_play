@@ -1,0 +1,7 @@
+---
+# CmdLine: ansible-playbook -i localhost, demo.yml
+#
+ - hosts: all
+   gather_facts: false
+   tasks:
+   - debug: msg="This is a demo for a simple playbook!"
