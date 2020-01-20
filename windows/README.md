@@ -10,6 +10,7 @@
 1.  [Ansible-Windows Host Setup](https://docs.ansible.com/ansible/latest/user_guide/windows_setup.html#)
 1.  [ConfigureRemotingForAnsible.ps1](https://github.com/ansible/ansible/blob/devel/examples/scripts/ConfigureRemotingForAnsible.ps1)
 1.  [Ansible Examples - GITHUB](https://github.com/ansible/ansible-examples)
+1.  [Mastering Ansible Examples - GITHUB](https://github.com/spurin/masteringansible)
 
 # Example Ansible commands, using Ubuntu on WSL:
 1.  ansible-playbook Playbook1.yml -i inventory.txt --connection=local

@@ -1,0 +1,27 @@
+#
+# To setup a simple test env for this demo, edit the /etc/hosts file
+# and add multiple lines for 127.0.0.1, each line having a matching
+# hostname as per the hosts mentioned below.
+#
+[control]
+wsl ansible_connection=local
+
+[centos]
+centos[1:3]
+
+[centos:vars]
+ansible_user=root
+
+[ubuntu]
+ubuntu[1:3]
+
+[ubuntu:vars]
+ansible_become=true
+ansible_become_pass=password
+
+[linux:children]
+centos
+ubuntu
+
+[all:vars]
+ansible_port=22
