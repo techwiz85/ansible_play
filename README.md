@@ -69,19 +69,19 @@
           ( ansible_distribution == "Ubuntu" and ansible_distribution_major_version | int >= 11 )
     ```
 
-1.  ~~~
+1.  ```
     command: hostname -s
     when: 
       - ansible_distribution == "CentOS" 
       - ansible_distribution_major_version | int >= 7
     register: command_register
-    ~~~
+    ```
 
-1.  ~~~
+1.  ```
     - name: Install Nginx Ubuntu
       apt:
         name: nginx
         update_cache: yes
         state: latest
       when: ansible_distribution == 'Ubuntu'
-    ~~~
+    ```
