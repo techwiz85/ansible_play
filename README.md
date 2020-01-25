@@ -1,4 +1,11 @@
-# ansible_play
+# Ansible Play
+
+To get rid of the ansible warning about world having WRITE access to ansible config files, you need to add a section to the WSL "/etc/wsl.conf" file.  Add the following lines (sudo vi /etc/wsl.conf):
+
+[automount]
+options = "metadata,umask=22,fmask=11"
+
+Then, you need to terminate and restart the Ubuntu WSL by opening a windows cmd prompt, and enter: wsl.exe --terminate ubuntu.
 
 # YAML Help
 
